@@ -27,7 +27,7 @@ def main():
     if args.json:
         input_str = sys.stdin.read()
         j = json.loads(input_str)
-        pprint(j)
+        pprint(j, compact=True)
     if args.yaml:
         y = yaml.load(sys.stdin, Loader=Loader)
         print(yaml.dump(y, Dumper=Dumper))
